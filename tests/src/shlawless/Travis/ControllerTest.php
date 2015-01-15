@@ -1,6 +1,6 @@
 <?php
 
-class ControllerTest
+class ControllerTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @test
@@ -11,7 +11,7 @@ class ControllerTest
         $request = $this->getMockBuilder('\\Symfony\\Component\\HttpFoundation\\Request')->disableOriginalConstructor()->getMock();
         $request->expects($this->once())
             ->method('get')
-            ->willReturn('xml');
+            ->will('xml');
 
         $controller = new shlawless\Travis\Controller;
 
