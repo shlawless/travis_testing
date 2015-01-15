@@ -9,7 +9,7 @@ class ControllerTest extends PHPUnit_Framework_TestCase
     public function indexAction()
     {
         $request = $this->getMockBuilder('\\Symfony\\Component\\HttpFoundation\\Request')->disableOriginalConstructor()->getMock();
-        $request->expects($this->once())
+        $request->expects($this->any())
             ->method('get')
             ->will($this->returnValue('xml'));
 
