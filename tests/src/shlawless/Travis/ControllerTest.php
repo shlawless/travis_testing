@@ -11,7 +11,7 @@ class ControllerTest extends PHPUnit_Framework_TestCase
         $request = $this->getMockBuilder('\\Symfony\\Component\\HttpFoundation\\Request')->disableOriginalConstructor()->getMock();
         $request->expects($this->once())
             ->method('get')
-            ->will('xml');
+            ->will($this->returnValue('xml'));
 
         $controller = new shlawless\Travis\Controller;
 
