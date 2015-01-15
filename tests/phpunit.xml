@@ -1,0 +1,21 @@
+<phpunit bootstrap="phpunitBootstrap.php" colors="true"
+         convertNoticesToExceptions="false"
+         convertWarningsToExceptions="false">
+    <testsuite>
+        <testsuite name="Travis Testing">
+            <directory>./src</directory>
+        </testsuite>
+    </testsuite>
+    <filter>
+        <blacklist>
+            <directory suffix=".php">../vendor</directory>
+        </blacklist>
+        <whitelist>
+            <directory suffix="Test.php">../src</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-html" target="./report/coverage" title="PP Live Odds Webservice" charset="UTF-8" yui="true"
+             highlight="true" lowUpperBound="35" highLowerBound="70"/>
+    </logging>
+</phpunit>

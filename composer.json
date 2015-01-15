@@ -1,0 +1,19 @@
+{
+    "name": "shlawless/travis_testing",
+    "authors": [
+        {
+            "name": "Shaun Lawless",
+            "email": "shlawless@paddypower.com"
+        }
+    ],
+    "require": {
+		"silex/silex" : "~1.2",
+        "monolog/monolog" : "~1.11",
+        "filp/whoops" : "~1.1"
+	},
+    "autoload": {
+        "psr-4": {
+            "shlawless\\Travis\\": "src/shlawless/Travis"
+        }
+    }
+}
