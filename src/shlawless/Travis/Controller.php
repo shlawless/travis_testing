@@ -13,7 +13,7 @@ class Controller
     public function indexAction(Request $request)
     {
         if ($request->get('format')) {
-            return json_encode(['fromat' => $request->get('format')]);
+            return json_encode(['format' => $request->get('format')]);
         }
 
     }
